@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KATANORA — Automatic YouTube Shorts from Podcasts</title>
+  <meta name="description" content="KATANORA automatically turns long-form podcast episodes into viral YouTube Shorts. Detection, clipping, captions, and upload — fully automatic.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:           #08080A;
+      --surface:      #0F0F13;
+      --border:       #1A1A22;
+      --text:         #F2F2F5;
+      --muted:        #5C5C6E;
+      --accent:       #FF2D55;
+      --accent-soft:  rgba(255, 45, 85, 0.10);
+      --display:      'Syne', sans-serif;
+      --body:         'Inter', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--body);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ─────────────────────────────────────── */
+    nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 48px;
+      background: rgba(8, 8, 10, 0.80);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 17px;
+      letter-spacing: 0.1em;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .nav-logo em { color: var(--accent); font-style: normal; }
+
+    .nav-link {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: var(--text); }
+
+    /* ── HERO ────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 140px 48px 100px;
+      max-width: 1120px;
+      margin: 0 auto;
+      /* signature: left blade accent */
+      border-left: 3px solid var(--accent);
+      margin-left: 48px;
+      padding-left: 48px;
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 32px;
+    }
+
+    .hero h1 {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: clamp(48px, 7.5vw, 92px);
+      line-height: 1.0;
+      letter-spacing: -0.025em;
+      max-width: 800px;
+      margin-bottom: 32px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 480px;
+      line-height: 1.75;
+      margin-bottom: 48px;
+    }
+
+    .cta {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 16px 40px;
+      transition: opacity 0.2s, transform 0.15s;
+    }
+    .cta:hover { opacity: 0.85; transform: translateY(-1px); }
+
+    /* ── RULE ────────────────────────────────────── */
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0 48px;
+    }
+
+    /* ── SECTIONS ────────────────────────────────── */
+    .section {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 96px 48px;
+    }
+
+    .label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 52px;
+    }
+
+    /* ── STEPS ───────────────────────────────────── */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+
+    .step {
+      background: var(--surface);
+      padding: 48px 36px;
+      border: 1px solid var(--border);
+    }
+
+    .step:first-child {
+      border-left: 3px solid var(--accent);
+    }
+
+    .step-num {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 40px;
+      color: var(--border);
+      margin-bottom: 20px;
+      line-height: 1;
+    }
+
+    .step h3 {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 19px;
+      margin-bottom: 12px;
+    }
+
+    .step p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* ── FEATURES ────────────────────────────────── */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+    }
+
+    .feature {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 44px 40px;
+    }
+
+    .feature h3 {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* ── FOOTER ──────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 36px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .footer-logo {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 15px;
+      letter-spacing: 0.1em;
+    }
+    .footer-logo em { color: var(--accent); font-style: normal; }
+
+    .footer-links {
+      display: flex;
+      gap: 28px;
+    }
+
+    .footer-links a, footer p {
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--text); }
+
+    /* ── RESPONSIVE ──────────────────────────────── */
+    @media (max-width: 768px) {
+      nav   { padding: 18px 24px; }
+      .hero { margin-left: 24px; padding: 120px 24px 72px; border-left-width: 2px; }
+      hr    { margin: 0 24px; }
+      .section { padding: 72px 24px; }
+      .steps   { grid-template-columns: 1fr; }
+      .features{ grid-template-columns: 1fr; }
+      footer   { flex-direction: column; gap: 20px; text-align: center; padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">KATA<em>N</em>ORA</a>
+  <a href="/privacy.html" class="nav-link">Privacy Policy</a>
+</nav>
+
+<main>
+
+  <div class="hero">
+    <p class="eyebrow">Automated Short-Form Video</p>
+    <h1>Turn every episode<br>into Shorts.<br>Automatically.</h1>
+    <p>KATANORA monitors YouTube channels, finds the most engaging moments, and publishes them as vertical Shorts — with captions, cropping, and upload handled end to end.</p>
+    <a href="mailto:YOUR_EMAIL_HERE" class="cta">Request Early Access</a>
+  </div>
+
+  <hr>
+
+  <section class="section">
+    <p class="label">How it works</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Connect</h3>
+        <p>Link your YouTube channel and select which long-form channels to monitor. KATANORA watches for new uploads around the clock.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Clip</h3>
+        <p>AI reads transcripts, identifies the strongest 45-second moments, and cuts each one as a vertical video — no manual review needed.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Post</h3>
+        <p>Captions burn in automatically. Each clip uploads directly to your YouTube Shorts channel with an optimized title, description, and tags.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="section">
+    <p class="label">Built for creators</p>
+    <div class="features">
+      <div class="feature">
+        <h3>Fully automated pipeline</h3>
+        <p>Every step from detection to upload runs without manual input. Configure once, then let it run 24/7 in the background.</p>
+      </div>
+      <div class="feature">
+        <h3>AI moment detection</h3>
+        <p>Groq-powered AI analyzes transcripts to surface high-engagement moments — insights, stories, and hooks proven to perform on short-form platforms.</p>
+      </div>
+      <div class="feature">
+        <h3>Karaoke-style captions</h3>
+        <p>Word-by-word caption cards burned directly into each clip. The format that increases watch time and reach on YouTube Shorts.</p>
+      </div>
+      <div class="feature">
+        <h3>Your channel, your content</h3>
+        <p>Clips upload to your connected YouTube channel via your own account. Your content stays under your control.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span class="footer-logo">KATA<em>N</em>ORA</span>
+  <p>© 2026 KATANORA. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="mailto:YOUR_EMAIL_HERE">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>
