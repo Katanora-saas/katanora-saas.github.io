@@ -59,6 +59,12 @@
     }
     .nav-logo em { color: var(--accent); font-style: normal; }
 
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
     .nav-link {
       color: var(--muted);
       font-size: 13px;
@@ -67,6 +73,20 @@
       transition: color 0.2s;
     }
     .nav-link:hover { color: var(--text); }
+
+    .nav-cta {
+      background: var(--accent);
+      color: #fff;
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 10px 22px;
+      transition: opacity 0.2s;
+    }
+    .nav-cta:hover { opacity: 0.85; }
 
     /* ── HERO ────────────────────────────────────── */
     .hero {
@@ -77,7 +97,6 @@
       padding: 140px 48px 100px;
       max-width: 1120px;
       margin: 0 auto;
-      /* signature: left blade accent */
       border-left: 3px solid var(--accent);
       margin-left: 48px;
       padding-left: 48px;
@@ -124,6 +143,17 @@
       transition: opacity 0.2s, transform 0.15s;
     }
     .cta:hover { opacity: 0.85; transform: translateY(-1px); }
+
+    .member-link {
+      display: block;
+      margin-top: 16px;
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .member-link:hover { color: var(--text); }
+    .member-link span { color: var(--accent); }
 
     /* ── RULE ────────────────────────────────────── */
     hr {
@@ -254,6 +284,7 @@
       .steps   { grid-template-columns: 1fr; }
       .features{ grid-template-columns: 1fr; }
       footer   { flex-direction: column; gap: 20px; text-align: center; padding: 32px 24px; }
+      .nav-cta { display: none; }
     }
   </style>
 </head>
@@ -261,7 +292,11 @@
 
 <nav>
   <a href="/" class="nav-logo">KATA<em>N</em>ORA</a>
-  <a href="/privacy.html" class="nav-link">Privacy Policy</a>
+  <div class="nav-links">
+    <a href="/privacy.html" class="nav-link">Privacy Policy</a>
+    <a href="https://app.katanora.com/manage" class="nav-link">My Account</a>
+    <a href="https://app.katanora.com" class="nav-cta">Get Started</a>
+  </div>
 </nav>
 
 <main>
@@ -270,7 +305,8 @@
     <p class="eyebrow">Automated Short-Form Video</p>
     <h1>Turn every episode<br>into Shorts.<br>Automatically.</h1>
     <p>KATANORA monitors YouTube channels, finds the most engaging moments, and publishes them as vertical Shorts — with captions, cropping, and upload handled end to end.</p>
-    <a href="mailto:katanora.ai@gmail.com" class="cta">Request Early Access</a>
+    <a href="https://app.katanora.com" class="cta">Get Started — Free Trial</a>
+    <a href="https://app.katanora.com/manage" class="member-link">Already a member? <span>Manage your channels →</span></a>
   </div>
 
   <hr>
@@ -327,6 +363,7 @@
   <p>© 2026 KATANORA. All rights reserved.</p>
   <div class="footer-links">
     <a href="/privacy.html">Privacy Policy</a>
+    <a href="https://app.katanora.com/manage">My Account</a>
     <a href="mailto:katanora.ai@gmail.com">Contact</a>
   </div>
 </footer>
