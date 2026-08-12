@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KATANORA — Terms of Service</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #08080A;
+      --surface: #0F0F13;
+      --border: #1A1A22;
+      --text: #F2F2F5;
+      --muted: #5C5C6E;
+      --accent: #FF2D55;
+      --display: 'Syne', sans-serif;
+      --body: 'Inter', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--body);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 48px;
+      background: rgba(8, 8, 10, 0.80);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 17px;
+      letter-spacing: 0.1em;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .nav-logo em { color: var(--accent); font-style: normal; }
+    .nav-link {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: var(--text); }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 140px 48px 100px;
+    }
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 42px;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+    .last-updated {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 48px;
+    }
+    h2 {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 20px;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+    p {
+      color: var(--muted);
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+    ul {
+      color: var(--muted);
+      font-size: 15px;
+      padding-left: 24px;
+      margin-bottom: 16px;
+    }
+    ul li { margin-bottom: 8px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 48px 0;
+    }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 36px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+    .footer-logo {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 15px;
+      letter-spacing: 0.1em;
+    }
+    .footer-logo em { color: var(--accent); font-style: normal; }
+    .footer-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+    .footer-links a, footer p {
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--text); }
+    @media (max-width: 768px) {
+      nav { padding: 18px 24px; }
+      .container { padding: 120px 24px 72px; }
+      footer { flex-direction: column; gap: 20px; text-align: center; padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">KATA<em>N</em>ORA</a>
+  <a href="/" class="nav-link">← Back to Home</a>
+</nav>
+
+<div class="container">
+  <p class="eyebrow">Legal</p>
+  <h1>Terms of Service</h1>
+  <p class="last-updated">Last updated: August 12, 2026</p>
+
+  <p>These Terms of Service ("Terms") govern your access to and use of KATANORA ("we," "us," or "our"), operated by KATANORA LLC, a Florida limited liability company. By accessing or using KATANORA, you agree to be bound by these Terms.</p>
+
+  <h2>1. Description of Service</h2>
+  <p>KATANORA is an automated software service that monitors YouTube channels selected by you, identifies engaging moments using artificial intelligence, and uploads short-form video clips ("Shorts") to your connected YouTube channel on your behalf. The service requires you to authorize KATANORA to access your YouTube account via Google OAuth 2.0.</p>
+
+  <h2>2. Eligibility</h2>
+  <p>You must be at least 18 years old to use KATANORA. By using the service you represent that you meet this requirement and that you have the legal authority to enter into these Terms.</p>
+
+  <h2>3. Account and Authorization</h2>
+  <p>To use KATANORA you must connect your Google account and authorize access to your YouTube channel. You are responsible for maintaining the security of your account and for all activity that occurs under your authorization. You agree to notify us immediately at <a href="mailto:katanora.ai@gmail.com">katanora.ai@gmail.com</a> if you become aware of any unauthorized use.</p>
+
+  <h2>4. Subscriptions and Billing</h2>
+  <p>KATANORA is offered on a subscription basis with the following terms:</p>
+  <ul>
+    <li>All plans include a 24-hour free trial period.</li>
+    <li>After the trial period ends, your payment method will be automatically charged based on your selected plan (monthly or annual).</li>
+    <li>Subscriptions automatically renew at the end of each billing period unless cancelled.</li>
+    <li>Annual plans are billed upfront for the full year.</li>
+    <li>You may cancel your subscription at any time from your account dashboard. Cancellations take effect at the end of your current billing period.</li>
+    <li>Cancellations after the free trial period are non-refundable for the current billing cycle. No partial refunds are issued.</li>
+  </ul>
+
+  <h2>5. Acceptable Use</h2>
+  <p>You agree to use KATANORA only for lawful purposes. You may not:</p>
+  <ul>
+    <li>Use the service to upload content that violates YouTube's Terms of Service or Community Guidelines</li>
+    <li>Upload content that infringes on the intellectual property rights of others</li>
+    <li>Use the service to upload spam, misleading content, or content that violates any applicable law</li>
+    <li>Attempt to reverse engineer, hack, or circumvent any aspect of the service</li>
+    <li>Share your account credentials with others or allow multiple users to access a single account</li>
+  </ul>
+
+  <h2>6. Content and Copyright</h2>
+  <p>You are solely responsible for ensuring you have the necessary rights, licenses, and permissions to the content that KATANORA monitors and clips on your behalf. KATANORA clips content from YouTube channels you designate — you represent that you have the right to create derivative works from that content.</p>
+  <p>We do not claim ownership over any content processed through KATANORA. You retain all rights to your content.</p>
+
+  <h2>7. YouTube API Services</h2>
+  <p>KATANORA uses the YouTube Data API v3. By using our service, you also agree to be bound by the <a href="https://www.youtube.com/t/terms" target="_blank">YouTube Terms of Service</a> and the <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>. You can revoke KATANORA's access to your Google account at any time via <a href="https://myaccount.google.com/permissions" target="_blank">Google Account Permissions</a>.</p>
+
+  <h2>8. Service Availability</h2>
+  <p>We strive to maintain reliable service but do not guarantee uninterrupted availability. KATANORA may be temporarily unavailable due to maintenance, updates, or circumstances beyond our control. We are not liable for any losses resulting from service interruptions.</p>
+
+  <h2>9. Channel Change Limits</h2>
+  <p>Depending on your plan, you may monitor a limited number of YouTube channels. You are allowed up to 3 channel changes per calendar month. Unused changes do not roll over to the following month.</p>
+
+  <h2>10. Termination</h2>
+  <p>We reserve the right to suspend or terminate your account at any time if you violate these Terms or engage in behavior that we determine, in our sole discretion, to be harmful to the service or other users. You may terminate your account at any time by cancelling your subscription and ceasing use of the service.</p>
+
+  <h2>11. Disclaimer of Warranties</h2>
+  <p>KATANORA is provided "as is" and "as available" without warranties of any kind, either express or implied. We do not warrant that the service will be error-free, uninterrupted, or that any particular results will be achieved through use of the service.</p>
+
+  <h2>12. Limitation of Liability</h2>
+  <p>To the fullest extent permitted by law, KATANORA LLC shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or goodwill, arising out of or in connection with your use of the service, even if we have been advised of the possibility of such damages. Our total liability to you for any claim arising out of these Terms shall not exceed the amount you paid us in the three months preceding the claim.</p>
+
+  <h2>13. Indemnification</h2>
+  <p>You agree to indemnify and hold harmless KATANORA LLC and its members, officers, and employees from any claims, damages, losses, or expenses (including legal fees) arising out of your use of the service, your violation of these Terms, or your violation of any third-party rights.</p>
+
+  <h2>14. Governing Law</h2>
+  <p>These Terms are governed by the laws of the State of Florida, without regard to its conflict of law provisions. Any disputes arising under these Terms shall be resolved in the courts of Pinellas County, Florida.</p>
+
+  <h2>15. Changes to These Terms</h2>
+  <p>We may update these Terms from time to time. When we do, we will revise the "Last updated" date at the top of this page. Continued use of the service after changes constitutes acceptance of the revised Terms. We will make reasonable efforts to notify you of material changes via email.</p>
+
+  <h2>16. Contact Us</h2>
+  <p>If you have any questions about these Terms, please contact us at:</p>
+  <p><a href="mailto:katanora.ai@gmail.com">katanora.ai@gmail.com</a><br>KATANORA LLC<br>Clearwater, Florida</p>
+
+  <hr>
+  <p style="font-size:13px;color:var(--muted);">By using KATANORA, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.</p>
+</div>
+
+<footer>
+  <span class="footer-logo">KATA<em>N</em>ORA</span>
+  <p>© 2026 KATANORA LLC. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms of Service</a>
+    <a href="https://app.katanora.com/manage">My Account</a>
+    <a href="mailto:katanora.ai@gmail.com">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>
