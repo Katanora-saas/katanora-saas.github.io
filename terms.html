@@ -1,240 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KATANORA — Terms of Service</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg: #08080A;
-      --surface: #0F0F13;
-      --border: #1A1A22;
-      --text: #F2F2F5;
-      --muted: #5C5C6E;
-      --accent: #FF2D55;
-      --display: 'Syne', sans-serif;
-      --body: 'Inter', sans-serif;
-    }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--body);
-      font-size: 16px;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-    nav {
-      position: fixed;
-      inset: 0 0 auto 0;
-      z-index: 100;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 22px 48px;
-      background: rgba(8, 8, 10, 0.80);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-logo {
-      font-family: var(--display);
-      font-weight: 800;
-      font-size: 17px;
-      letter-spacing: 0.1em;
-      color: var(--text);
-      text-decoration: none;
-    }
-    .nav-logo em { color: var(--accent); font-style: normal; }
-    .nav-link {
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 500;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .nav-link:hover { color: var(--text); }
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 140px 48px 100px;
-    }
-    .eyebrow {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.24em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 16px;
-    }
-    h1 {
-      font-family: var(--display);
-      font-weight: 800;
-      font-size: 42px;
-      line-height: 1.1;
-      margin-bottom: 8px;
-    }
-    .last-updated {
-      color: var(--muted);
-      font-size: 13px;
-      margin-bottom: 48px;
-    }
-    h2 {
-      font-family: var(--display);
-      font-weight: 700;
-      font-size: 20px;
-      margin-top: 48px;
-      margin-bottom: 16px;
-      color: var(--text);
-    }
-    p {
-      color: var(--muted);
-      margin-bottom: 16px;
-      font-size: 15px;
-    }
-    ul {
-      color: var(--muted);
-      font-size: 15px;
-      padding-left: 24px;
-      margin-bottom: 16px;
-    }
-    ul li { margin-bottom: 8px; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    hr {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 48px 0;
-    }
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 36px 48px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1120px;
-      margin: 0 auto;
-    }
-    .footer-logo {
-      font-family: var(--display);
-      font-weight: 800;
-      font-size: 15px;
-      letter-spacing: 0.1em;
-    }
-    .footer-logo em { color: var(--accent); font-style: normal; }
-    .footer-links {
-      display: flex;
-      gap: 28px;
-      align-items: center;
-    }
-    .footer-links a, footer p {
-      font-size: 13px;
-      color: var(--muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .footer-links a:hover { color: var(--text); }
-    @media (max-width: 768px) {
-      nav { padding: 18px 24px; }
-      .container { padding: 120px 24px 72px; }
-      footer { flex-direction: column; gap: 20px; text-align: center; padding: 32px 24px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — KATANORA</title>
+<meta name="description" content="KATANORA Terms of Service — the terms governing use of the KATANORA automated short-form video platform.">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<style>
+  :root {
+    --bg: #0a0a0b;
+    --bg-panel: #131315;
+    --line: #232326;
+    --text: #e8e6e3;
+    --text-dim: #8c8a87;
+    --accent: #e0263d;
+    --accent-dim: #7a1420;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Courier New', ui-monospace, SFMono-Regular, Menlo, monospace;
+    line-height: 1.7;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header {
+    border-bottom: 1px solid var(--line);
+    padding: 28px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    font-size: 1.15rem;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .logo span { color: var(--accent); }
+
+  nav a {
+    font-size: 0.82rem;
+    color: var(--text-dim);
+    letter-spacing: 0.04em;
+    margin-left: 20px;
+  }
+  nav a:hover { color: var(--text); }
+
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 24px 100px;
+  }
+
+  .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+    letter-spacing: 0.02em;
+    margin: 0 0 8px;
+    color: var(--text);
+  }
+
+  .updated {
+    font-size: 0.82rem;
+    color: var(--text-dim);
+    margin-bottom: 48px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  h2 {
+    font-size: 1.05rem;
+    letter-spacing: 0.03em;
+    color: var(--text);
+    margin: 44px 0 14px;
+    padding-top: 4px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  h2 .num {
+    color: var(--accent);
+    font-size: 0.85rem;
+  }
+
+  p, li {
+    font-size: 0.92rem;
+    color: #c9c7c3;
+  }
+
+  ul, ol {
+    padding-left: 22px;
+    margin: 10px 0;
+  }
+
+  li { margin-bottom: 8px; }
+
+  strong { color: var(--text); font-weight: 700; }
+
+  .callout {
+    background: var(--bg-panel);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    padding: 16px 18px;
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    margin: 28px 0 40px;
+  }
+
+  .callout strong { color: var(--accent); }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 32px 24px;
+    max-width: 760px;
+    margin: 0 auto;
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  footer a { color: var(--text-dim); margin-right: 16px; }
+  footer a:hover { color: var(--accent); }
+
+  @media (max-width: 600px) {
+    header, main, footer { padding-left: 18px; padding-right: 18px; }
+    h1 { font-size: 1.5rem; }
+    nav a { margin-left: 12px; font-size: 0.72rem; }
+  }
+</style>
 </head>
 <body>
 
-<nav>
-  <a href="/" class="nav-logo">KATA<em>N</em>ORA</a>
-  <a href="/" class="nav-link">← Back to Home</a>
-</nav>
+<header>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <img src="data:image/png;base64,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" alt="KATANORA logo" style="width:36px;height:36px;">
+    <div class="logo">KATA<span>N</span>ORA</div>
+  </div>
+  <nav>
+    <a href="https://katanora.com/">Home</a>
+    <a href="https://katanora.com/privacy.html">Privacy</a>
+    <a href="https://app.katanora.com">Get Started</a>
+  </nav>
+</header>
 
-<div class="container">
-  <p class="eyebrow">Legal</p>
+<main>
+  <div class="eyebrow">Legal</div>
   <h1>Terms of Service</h1>
-  <p class="last-updated">Last updated: August 12, 2026</p>
+  <div class="updated">Effective date: August 12, 2026 &nbsp;·&nbsp; KATANORA LLC</div>
 
-  <p>These Terms of Service ("Terms") govern your access to and use of KATANORA ("we," "us," or "our"), operated by KATANORA LLC, a Florida limited liability company. By accessing or using KATANORA, you agree to be bound by these Terms.</p>
+  <p>These Terms of Service ("Terms") govern access to and use of KATANORA's website, applications, and automated short-form video services (collectively, the "Service"), operated by KATANORA LLC ("KATANORA," "we," "us," or "our"). By creating an account, connecting a platform account, or otherwise using the Service, you agree to be bound by these Terms. If you do not agree, do not use the Service.</p>
 
-  <h2>1. Description of Service</h2>
-  <p>KATANORA is an automated software service that monitors YouTube channels selected by you, identifies engaging moments using artificial intelligence, and uploads short-form video clips ("Shorts") to your connected YouTube channel on your behalf. The service requires you to authorize KATANORA to access your YouTube account via Google OAuth 2.0.</p>
+  <div class="callout">
+    <strong>In short:</strong> KATANORA connects to your video accounts to automatically detect, clip, caption, and publish short-form video content on your behalf. You control which accounts are connected and can disconnect at any time. You're responsible for the content that gets published and for complying with each platform's own rules.
+  </div>
 
-  <h2>2. Eligibility</h2>
-  <p>You must be at least 18 years old to use KATANORA. By using the service you represent that you meet this requirement and that you have the legal authority to enter into these Terms.</p>
+  <h2><span class="num">01</span> Eligibility &amp; Accounts</h2>
+  <p>You must be at least 18 years old, or the age of majority in your jurisdiction, to use the Service. You are responsible for maintaining accurate account information and for safeguarding your login credentials. You're responsible for all activity that occurs under your account.</p>
 
-  <h2>3. Account and Authorization</h2>
-  <p>To use KATANORA you must connect your Google account and authorize access to your YouTube channel. You are responsible for maintaining the security of your account and for all activity that occurs under your authorization. You agree to notify us immediately at <a href="mailto:katanora.ai@gmail.com">katanora.ai@gmail.com</a> if you become aware of any unauthorized use.</p>
-
-  <h2>4. Subscriptions and Billing</h2>
-  <p>KATANORA is offered on a subscription basis with the following terms:</p>
+  <h2><span class="num">02</span> The Service</h2>
+  <p>KATANORA connects to third-party platforms you authorize (currently including YouTube, and expanding to additional platforms such as TikTok and Instagram) to:</p>
   <ul>
-    <li>All plans include a 24-hour free trial period.</li>
-    <li>After the trial period ends, your payment method will be automatically charged based on your selected plan (monthly or annual).</li>
-    <li>Subscriptions automatically renew at the end of each billing period unless cancelled.</li>
-    <li>Annual plans are billed upfront for the full year.</li>
-    <li>You may cancel your subscription at any time from your account dashboard. Cancellations take effect at the end of your current billing period.</li>
-    <li>Cancellations after the free trial period are non-refundable for the current billing cycle. No partial refunds are issued.</li>
+    <li>Monitor connected source channels or accounts for new long-form content</li>
+    <li>Use automated analysis to identify segments suitable for short-form clips</li>
+    <li>Generate vertical video clips with captions and formatting</li>
+    <li>Publish the resulting clips to platforms you've connected and authorized, on your behalf</li>
+  </ul>
+  <p>You control which source accounts are monitored and which destination accounts receive published content. You may disconnect any connected account at any time through your account settings, which will stop future automated actions on that account.</p>
+
+  <h2><span class="num">03</span> Free Trial &amp; Billing</h2>
+  <p>KATANORA may offer a free trial period as described at signup. Unless canceled before the trial ends, you will be automatically charged according to the plan you selected when you signed up. Charges recur on the billing cycle associated with your plan (e.g., monthly or annually) until you cancel.</p>
+  <ul>
+    <li>You can cancel at any time through your account settings.</li>
+    <li>Cancellations take effect at the end of the current billing cycle. Charges already incurred for the current cycle, including trial-conversion charges, are <strong>non-refundable</strong>, except where required by law.</li>
+    <li>We may change our pricing with advance notice; continued use after a price change takes effect constitutes acceptance of the new pricing.</li>
   </ul>
 
-  <h2>5. Acceptable Use</h2>
-  <p>You agree to use KATANORA only for lawful purposes. You may not:</p>
+  <h2><span class="num">04</span> Your Content &amp; Connected Accounts</h2>
+  <p>You retain all ownership rights in the source content you connect to KATANORA and in the clips generated from it. By using the Service, you grant KATANORA a limited license to access, process, edit, caption, and publish that content solely for the purpose of providing the Service to you, and only to the destination accounts you've explicitly authorized.</p>
+  <p>You represent that you own or have the necessary rights to the source content you connect, and that your use of the Service complies with the terms of service of each third-party platform you connect (including YouTube's, TikTok's, and Meta's respective terms).</p>
+
+  <h2><span class="num">05</span> Acceptable Use</h2>
+  <p>You agree not to use the Service to:</p>
   <ul>
-    <li>Use the service to upload content that violates YouTube's Terms of Service or Community Guidelines</li>
-    <li>Upload content that infringes on the intellectual property rights of others</li>
-    <li>Use the service to upload spam, misleading content, or content that violates any applicable law</li>
-    <li>Attempt to reverse engineer, hack, or circumvent any aspect of the service</li>
-    <li>Share your account credentials with others or allow multiple users to access a single account</li>
+    <li>Publish content that infringes another party's intellectual property or other rights</li>
+    <li>Publish unlawful, defamatory, or fraudulent content</li>
+    <li>Violate the terms of service, community guidelines, or API policies of any connected platform</li>
+    <li>Attempt to interfere with, disrupt, or reverse-engineer the Service</li>
+    <li>Use the Service to spam, mislead, or manipulate platform engagement metrics</li>
   </ul>
+  <p>We reserve the right to suspend or terminate accounts that violate this section, including where a connected platform notifies us of a policy violation tied to your use of the Service.</p>
 
-  <h2>6. Content and Copyright</h2>
-  <p>You are solely responsible for ensuring you have the necessary rights, licenses, and permissions to the content that KATANORA monitors and clips on your behalf. KATANORA clips content from YouTube channels you designate — you represent that you have the right to create derivative works from that content.</p>
-  <p>We do not claim ownership over any content processed through KATANORA. You retain all rights to your content.</p>
+  <h2><span class="num">06</span> Third-Party Platforms</h2>
+  <p>The Service integrates with third-party platforms (YouTube, TikTok, Instagram, and others as added) via their respective APIs. Your use of those platforms through KATANORA remains subject to each platform's own terms and policies. KATANORA is not responsible for changes, outages, restrictions, or account actions taken by those third-party platforms that affect the Service, including suspension of API access, changes to posting limits, or account-level enforcement action taken directly by the platform.</p>
 
-  <h2>7. YouTube API Services</h2>
-  <p>KATANORA uses the YouTube Data API v3. By using our service, you also agree to be bound by the <a href="https://www.youtube.com/t/terms" target="_blank">YouTube Terms of Service</a> and the <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>. You can revoke KATANORA's access to your Google account at any time via <a href="https://myaccount.google.com/permissions" target="_blank">Google Account Permissions</a>.</p>
+  <h2><span class="num">07</span> Disclaimers</h2>
+  <p>THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. WE DO NOT GUARANTEE THAT CLIPS GENERATED BY THE SERVICE WILL ACHIEVE ANY PARTICULAR LEVEL OF ENGAGEMENT, VIEWS, OR PERFORMANCE.</p>
 
-  <h2>8. Service Availability</h2>
-  <p>We strive to maintain reliable service but do not guarantee uninterrupted availability. KATANORA may be temporarily unavailable due to maintenance, updates, or circumstances beyond our control. We are not liable for any losses resulting from service interruptions.</p>
+  <h2><span class="num">08</span> Limitation of Liability</h2>
+  <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, KATANORA LLC AND ITS OFFICERS, EMPLOYEES, AND AFFILIATES SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, REVENUE, DATA, OR GOODWILL, ARISING FROM YOUR USE OF THE SERVICE. OUR TOTAL LIABILITY FOR ANY CLAIM ARISING FROM THESE TERMS OR THE SERVICE SHALL NOT EXCEED THE AMOUNT YOU PAID TO KATANORA IN THE THREE (3) MONTHS PRECEDING THE CLAIM.</p>
 
-  <h2>9. Channel Change Limits</h2>
-  <p>Depending on your plan, you may monitor a limited number of YouTube channels. You are allowed up to 3 channel changes per calendar month. Unused changes do not roll over to the following month.</p>
+  <h2><span class="num">09</span> Termination</h2>
+  <p>You may stop using the Service and disconnect your accounts at any time. We may suspend or terminate your access to the Service, with or without notice, if we reasonably believe you've violated these Terms, misused the Service, or if required to do so by a connected platform.</p>
 
-  <h2>10. Termination</h2>
-  <p>We reserve the right to suspend or terminate your account at any time if you violate these Terms or engage in behavior that we determine, in our sole discretion, to be harmful to the service or other users. You may terminate your account at any time by cancelling your subscription and ceasing use of the service.</p>
+  <h2><span class="num">10</span> Changes to These Terms</h2>
+  <p>We may update these Terms from time to time. Material changes will be reflected by an updated "Effective date" above, and where appropriate, additional notice will be provided. Continued use of the Service after changes take effect constitutes acceptance of the revised Terms.</p>
 
-  <h2>11. Disclaimer of Warranties</h2>
-  <p>KATANORA is provided "as is" and "as available" without warranties of any kind, either express or implied. We do not warrant that the service will be error-free, uninterrupted, or that any particular results will be achieved through use of the service.</p>
+  <h2><span class="num">11</span> Governing Law</h2>
+  <p>These Terms are governed by the laws of the State of Florida, United States, without regard to conflict-of-law principles, unless otherwise required by applicable law in your jurisdiction.</p>
 
-  <h2>12. Limitation of Liability</h2>
-  <p>To the fullest extent permitted by law, KATANORA LLC shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or goodwill, arising out of or in connection with your use of the service, even if we have been advised of the possibility of such damages. Our total liability to you for any claim arising out of these Terms shall not exceed the amount you paid us in the three months preceding the claim.</p>
+  <h2><span class="num">12</span> Contact</h2>
+  <p>Questions about these Terms can be sent via the contact information listed at <a href="https://katanora.com/">katanora.com</a>.</p>
 
-  <h2>13. Indemnification</h2>
-  <p>You agree to indemnify and hold harmless KATANORA LLC and its members, officers, and employees from any claims, damages, losses, or expenses (including legal fees) arising out of your use of the service, your violation of these Terms, or your violation of any third-party rights.</p>
-
-  <h2>14. Governing Law</h2>
-  <p>These Terms are governed by the laws of the State of Florida, without regard to its conflict of law provisions. Any disputes arising under these Terms shall be resolved in the courts of Pinellas County, Florida.</p>
-
-  <h2>15. Changes to These Terms</h2>
-  <p>We may update these Terms from time to time. When we do, we will revise the "Last updated" date at the top of this page. Continued use of the service after changes constitutes acceptance of the revised Terms. We will make reasonable efforts to notify you of material changes via email.</p>
-
-  <h2>16. Contact Us</h2>
-  <p>If you have any questions about these Terms, please contact us at:</p>
-  <p><a href="mailto:katanora.ai@gmail.com">katanora.ai@gmail.com</a><br>KATANORA LLC<br>Clearwater, Florida</p>
-
-  <hr>
-  <p style="font-size:13px;color:var(--muted);">By using KATANORA, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.</p>
-</div>
+</main>
 
 <footer>
-  <span class="footer-logo">KATA<em>N</em>ORA</span>
-  <p>© 2026 KATANORA LLC. All rights reserved.</p>
-  <div class="footer-links">
-    <a href="/privacy.html">Privacy Policy</a>
-    <a href="/terms.html">Terms of Service</a>
+  <div>© 2026 KATANORA LLC. All rights reserved.</div>
+  <div>
+    <a href="https://katanora.com/privacy.html">Privacy Policy</a>
     <a href="https://app.katanora.com/manage">My Account</a>
-    <a href="mailto:katanora.ai@gmail.com">Contact</a>
   </div>
 </footer>
 
