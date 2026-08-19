@@ -1,178 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — KATANORA</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg:      #08080A;
-      --surface: #0F0F13;
-      --border:  #1A1A22;
-      --text:    #F2F2F5;
-      --muted:   #5C5C6E;
-      --accent:  #FF2D55;
-      --display: 'Syne', sans-serif;
-      --body:    'Inter', sans-serif;
-    }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--body);
-      font-size: 16px;
-      line-height: 1.75;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 22px 48px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav-logo {
-      font-family: var(--display);
-      font-weight: 800;
-      font-size: 17px;
-      letter-spacing: 0.1em;
-      color: var(--text);
-      text-decoration: none;
-    }
-    .nav-logo em { color: var(--accent); font-style: normal; }
-
-    .nav-link {
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 500;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .nav-link:hover { color: var(--text); }
-
-    .doc {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 80px 48px 120px;
-    }
-
-    .doc-eyebrow {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 20px;
-    }
-
-    .doc h1 {
-      font-family: var(--display);
-      font-weight: 800;
-      font-size: 44px;
-      letter-spacing: -0.02em;
-      line-height: 1.05;
-      margin-bottom: 12px;
-    }
-
-    .doc .updated {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 64px;
-      padding-bottom: 40px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .doc h2 {
-      font-family: var(--display);
-      font-weight: 700;
-      font-size: 19px;
-      margin: 52px 0 16px;
-      color: var(--text);
-    }
-
-    .doc p {
-      color: #C0C0CC;
-      margin-bottom: 16px;
-      font-size: 15px;
-    }
-
-    .doc ul {
-      margin: 0 0 16px 20px;
-      color: #C0C0CC;
-      font-size: 15px;
-    }
-
-    .doc ul li { margin-bottom: 8px; }
-
-    .doc a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    .doc a:hover { text-decoration: underline; }
-
-    .notice {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--accent);
-      padding: 24px 28px;
-      margin: 32px 0;
-    }
-
-    .notice p {
-      margin: 0;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 32px 48px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .footer-logo {
-      font-family: var(--display);
-      font-weight: 800;
-      font-size: 15px;
-      letter-spacing: 0.1em;
-    }
-    .footer-logo em { color: var(--accent); font-style: normal; }
-
-    footer p { font-size: 13px; color: var(--muted); }
-
-    @media (max-width: 768px) {
-      nav     { padding: 18px 24px; }
-      .doc    { padding: 60px 24px 80px; }
-      footer  { flex-direction: column; gap: 16px; text-align: center; padding: 28px 24px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — KATANORA</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, sans-serif; background: #0a0a0a; color: #fff; min-height: 100vh; padding: 40px 20px; }
+  .container { max-width: 720px; margin: 0 auto; }
+  header { display: flex; align-items: center; gap: 14px; margin-bottom: 40px; }
+  header img { width: 48px; height: 48px; }
+  header .wordmark { font-size: 20px; font-weight: 800; letter-spacing: 0.05em; }
+  header .wordmark span { color: #ff3b3b; }
+  .back { margin-left: auto; color: #888; font-size: 13px; text-decoration: none; }
+  .back:hover { color: #ff3b3b; }
+  .eyebrow { font-size: 12px; letter-spacing: 0.15em; color: #ff3b3b; text-transform: uppercase; margin-bottom: 8px; }
+  h1 { font-size: 32px; font-weight: 800; margin-bottom: 8px; }
+  .updated { color: #666; font-size: 13px; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid #1a1a1a; }
+  h2 { font-size: 18px; font-weight: 700; margin: 32px 0 12px; }
+  p, li { font-size: 14px; color: #ccc; line-height: 1.7; margin-bottom: 10px; }
+  ul { padding-left: 20px; margin-bottom: 14px; }
+  a { color: #ff3b3b; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  strong { color: #fff; }
+  .callout { background: #111; border: 1px solid #222; border-left: 3px solid #ff3b3b; padding: 14px 16px; font-size: 13px; color: #aaa; margin: 20px 0; }
+  footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #1a1a1a; color: #555; font-size: 12px; text-align: center; }
+</style>
 </head>
 <body>
+<div class="container">
+  <header>
+    <img src="data:image/png;base64,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" alt="KATANORA logo">
+    <span class="wordmark">KATA<span>N</span>ORA</span>
+    <a class="back" href="https://katanora.com/">← Back to Home</a>
+  </header>
 
-<nav>
-  <a href="/" class="nav-logo">KATA<em>N</em>ORA</a>
-  <a href="/" class="nav-link">← Back to Home</a>
-</nav>
-
-<div class="doc">
-  <p class="doc-eyebrow">Legal</p>
+  <div class="eyebrow">Legal</div>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: June 9, 2026</p>
+  <div class="updated">Last updated: June 9, 2026</div>
 
   <p>KATANORA ("we," "us," or "our") provides an automated service that monitors YouTube channels, generates short-form video clips, and uploads them to connected YouTube accounts. This Privacy Policy explains what information we collect, how we use it, and your rights as a user.</p>
 
-  <div class="notice">
-    <p><strong>Google API Services — Limited Use Disclosure:</strong> KATANORA's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
-  </div>
+  <div class="callout"><strong>Google API Services — Limited Use Disclosure:</strong> KATANORA's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</div>
 
   <h2>1. Information We Collect</h2>
   <p>When you connect your YouTube account to KATANORA, we collect and store the following:</p>
@@ -194,8 +64,8 @@
   <p>We do not use your YouTube account data for advertising, analytics, or any purpose unrelated to the service described above.</p>
 
   <h2>3. YouTube API Services</h2>
-  <p>KATANORA uses the YouTube Data API v3. By using our service, you agree to be bound by the <a href="https://www.youtube.com/t/terms" target="_blank">YouTube Terms of Service</a> and acknowledge the <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.</p>
-  <p>You can review and revoke KATANORA's access to your Google account at any time by visiting <a href="https://myaccount.google.com/permissions" target="_blank">Google Account Permissions</a>.</p>
+  <p>KATANORA uses the YouTube Data API v3. By using our service, you agree to be bound by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a> and acknowledge the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+  <p>You can review and revoke KATANORA's access to your Google account at any time by visiting <a href="https://myaccount.google.com/permissions">Google Account Permissions</a>.</p>
 
   <h2>4. Data Sharing and Disclosure</h2>
   <p>We do not sell, rent, or share your personal data with third parties. We do not transfer information received from Google APIs to any third party except as necessary to operate the service (e.g., cloud infrastructure providers) under confidentiality obligations.</p>
@@ -203,7 +73,7 @@
 
   <h2>5. Data Retention and Deletion</h2>
   <p>We retain your YouTube OAuth credentials and channel preferences only while your account is active. If you disconnect your YouTube account or request account deletion, we will delete your stored credentials and preferences within 30 days.</p>
-  <p>To request deletion of your data, contact us at <a href="mailto:katanora.ai@gmail.com">katanora.ai@gmail.com</a>.</p>
+  <p>To request deletion of your data, contact us at katanora.ai@gmail.com.</p>
 
   <h2>6. Data Security</h2>
   <p>We store OAuth tokens using environment-level encryption and do not expose them in logs, source code, or client-facing interfaces. Access is restricted to the service operations described in this policy.</p>
@@ -211,7 +81,7 @@
   <h2>7. Your Rights</h2>
   <p>You have the right to:</p>
   <ul>
-    <li>Revoke KATANORA's access to your Google account at any time via <a href="https://myaccount.google.com/permissions" target="_blank">Google Account Permissions</a>.</li>
+    <li>Revoke KATANORA's access to your Google account at any time via <a href="https://myaccount.google.com/permissions">Google Account Permissions</a>.</li>
     <li>Request a copy of the data we hold about you.</li>
     <li>Request deletion of your data at any time.</li>
   </ul>
@@ -224,14 +94,9 @@
   <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last updated" date at the top of this page. Continued use of the service after changes constitutes acceptance of the revised policy.</p>
 
   <h2>10. Contact Us</h2>
-  <p>If you have any questions about this Privacy Policy or your data, please contact us at:</p>
-  <p><a href="mailto:katanora.ai@gmail.com">katanora.ai@gmail.com</a></p>
+  <p>If you have any questions about this Privacy Policy or your data, please contact us at katanora.ai@gmail.com.</p>
+
+  <footer>© 2026 KATANORA. All rights reserved.</footer>
 </div>
-
-<footer>
-  <span class="footer-logo">KATA<em>N</em>ORA</span>
-  <p>© 2026 KATANORA. All rights reserved.</p>
-</footer>
-
 </body>
 </html>
